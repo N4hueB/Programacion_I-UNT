@@ -10,4 +10,3 @@ def validar_opcion(n_min, n_max)->int:
         else:
                 opcion = input("ingrese una opcion: ")
 
-print(validar_opcion(1,10))
