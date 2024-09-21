@@ -1,4 +1,6 @@
 from funciones import obtener_maximo
+from funciones import promedio
+from funciones import obtener_mitad_de_maximo
 
 def utn_mostrar_nombres_heroes(lista_nombres):
     """
@@ -62,5 +64,36 @@ def utn_filtrar_heroes_genero(lista_nombre, lista_identidad, lista_genero, lista
                 lista_altura[i],
                 lista_poder[i]))
 
+def utn_mostrar_heroes_poder_superior_promedio(lista_nombre, lista_identidad, lista_genero, lista_altura, lista_poder):
+    """
+    Documentacion
+    """
+    print("{:<20} | {:<40} | {:^10} | {:>7} | {:>5}".format(
+        "Nombre", "Identidad", "Género", "Altura", "Poder"))
+    print("-" * 100)  # Línea divisoria para mejorar la legibilidad
+    promedio_poder = promedio(lista_poder)
+    for i in range(len(lista_poder)):
+        if lista_poder[i] > promedio_poder:
+            print("{:<20} | {:<40} | {:^10} | {:>7.1f} | {:>5}".format(
+                lista_nombre[i],
+                lista_identidad[i],
+                lista_genero[i],
+                lista_altura[i],
+                lista_poder[i]))
 
-
+def utn_mostrar_heroes_mas_debiles(lista_nombre, lista_identidad, lista_genero, lista_altura, lista_poder):
+    """
+    Documentacion
+    """
+    print("{:<20} | {:<40} | {:^10} | {:>7} | {:>5}".format(
+        "Nombre", "Identidad", "Género", "Altura", "Poder"))
+    print("-" * 100)  # Línea divisoria para mejorar la legibilidad
+    poder_min = obtener_mitad_de_maximo(lista_poder)
+    for i in range(len(lista_poder)):
+        if lista_poder[i] < poder_min:
+            print("{:<20} | {:<40} | {:^10} | {:>7.1f} | {:>5}".format(
+                lista_nombre[i],
+                lista_identidad[i],
+                lista_genero[i],
+                lista_altura[i],
+                lista_poder[i]))

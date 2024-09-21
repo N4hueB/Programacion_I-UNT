@@ -32,9 +32,33 @@ def mostrar_nombre(lista_nombre, indice):
             indice_actual += 1
 
 def obtener_maximo(lista_numeros):
+    """
+    Documentacion
+    """
     numero_max = 0
     for numero in lista_numeros:
         if numero > numero_max:
             numero_max = numero
     numero_max = float(numero_max)
     return numero_max
+
+def promedio(lista_numeros):
+    """
+    Documentacion
+    """
+    total_lista = 0
+    promedio = 0
+    mensaje_error = "No se puede dividir por 0"
+    for numero in lista_numeros:
+        total_lista += numero
+    if len(lista_numeros) > 0:
+        promedio = round(float(total_lista / len(lista_numeros)), 2)
+        return promedio
+    else:
+        return mensaje_error
+
+def obtener_mitad_de_maximo(lista_numeros):
+    numero_max = obtener_maximo(lista_numeros)
+    mitad_max = numero_max / 2
+    return mitad_max
+
