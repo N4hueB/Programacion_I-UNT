@@ -1,7 +1,6 @@
 import pygame.mixer as mixer
 import time
 
-
 def limpiar_pantalla():
     """
     The function `limpiar_pantalla` clears the console screen and waits for user input to continue.
@@ -21,3 +20,21 @@ def play_sound():
     mixer.music.play()
     time.sleep(0.4)
 
+def mostrar_nombre(lista_nombre, indice):
+    """
+    Documentacion
+    """
+    indice_actual = 0
+    for nombre in lista_nombre:
+        if indice_actual == indice:
+            return nombre
+        else:
+            indice_actual += 1
+
+def obtener_maximo(lista_numeros):
+    numero_max = 0
+    for numero in lista_numeros:
+        if numero > numero_max:
+            numero_max = numero
+    numero_max = float(numero_max)
+    return numero_max

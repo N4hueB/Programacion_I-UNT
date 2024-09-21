@@ -1,1 +1,1 @@
-from validaciones import validar_opcion
+from .validaciones import validar_opcion
