@@ -12,5 +12,7 @@ from .funciones import utn_mostrar_heroes_mas_fuertes
 from .funciones import utn_filtrar_heroes_genero
 from .funciones import utn_mostrar_heroes_poder_superior_promedio
 from .funciones import utn_mostrar_heroes_mas_debiles
+from .funciones import utn_mostrar_poder_ascendente
+from .funciones import utn_mostrar_altura_descendente
 
 from .salida_consola import mostrar_menu
